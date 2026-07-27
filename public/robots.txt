@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tkartz.com/sitemap.xml

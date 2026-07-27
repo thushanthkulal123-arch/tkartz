@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background: #FFFFFF;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+
+  .tk-gradient-text {
+    background: linear-gradient(90deg, #2F3F9E 0%, #5A2CA0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tk-gradient-bg {
+    background: linear-gradient(90deg, #2F3F9E 0%, #5A2CA0 100%);
+  }
+
+  .tk-blue-gradient {
+    background: linear-gradient(180deg, #0392F1 0%, #0290F0 32.42%, #32B2FC 100%);
+  }
+
+  .tk-footer-gradient-text {
+    background: linear-gradient(
+      184.88deg,
+      #FFFFFF 21.94%,
+      rgba(255,255,255,0.25) 71.29%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-nav {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  .check-circle {
+    background: linear-gradient(90deg,#2F3F9E 0%,#5A2CA0 100%);
+  }
+}
+
+@layer utilities {
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ================================================= */
+/*                HERO CLOUD ANIMATION               */
+/* ================================================= */
+
+.cloud{
+  position:absolute;
+  pointer-events:none;
+  user-select:none;
+  opacity:0.8;
+  z-index:0;
+  animation:floatCloud ease-in-out infinite;
+}
+
+/* Cloud 1 */
+.cloud1{
+  width:220px;
+  top:60px;
+  left:-40px;
+  animation-duration:18s;
+}
+
+/* Cloud 2 */
+.cloud2{
+  width:500px;
+  top:150px;
+  right:80px;
+  animation-duration:26s;
+}
+
+/* Cloud 3 */
+.cloud3{
+  width:320px;
+  top:320px;
+  left:200px;
+  animation-duration:22s;
+}
+
+/* Cloud 4 */
+.cloud4{
+  width:260px;
+  top:460px;
+  right:180px;
+  animation-duration:20s;
+}
+
+/* Cloud 5 */
+.cloud5{
+  width:420px;
+  top:540px;
+  left:60%;
+  animation-duration:30s;
+}
+
+/* Cloud 6 */
+.cloud6{
+  width:260px;
+  top:680px;
+  left:30px;
+  animation-duration:24s;
+}
+
+/* Floating Animation */
+
+@keyframes floatCloud{
+
+  0%{
+    transform:translate(0px,0px);
+  }
+
+  25%{
+    transform:translate(20px,-12px);
+  }
+
+  50%{
+    transform:translate(-15px,-25px);
+  }
+
+  75%{
+    transform:translate(15px,-10px);
+  }
+
+  100%{
+    transform:translate(0px,0px);
+  }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width:640px){
+
+  .cloud1{
+    width:120px;
+    top:40px;
+    left:-40px;
+  }
+
+  .cloud2{
+    width:180px;
+    top:110px;
+    right:-60px;
+  }
+
+  .cloud3{
+    width:160px;
+    top:250px;
+    left:-10px;
+  }
+
+  .cloud4{
+    width:140px;
+    top:380px;
+    right:-30px;
+  }
+
+  .cloud5{
+    width:220px;
+    top:500px;
+    left:45%;
+  }
+
+  .cloud6{
+    display:none;
+  }
+
+}
